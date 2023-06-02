@@ -194,13 +194,11 @@
             />
           </v-col>
           <v-col cols="5">
-            <v-btn
-              disable-hover
-              :ripple="false"
-              class="custom-btn"
-              style="margin-left: 20px; margin-bottom: 10px; margin-top: 4px;"
-              text="BOOK A DEMO"
-            ></v-btn>
+            <button
+              class="input-custom-btn"
+              style="margin-left: -5px; margin-bottom: 10px; margin-top: 7px;"
+              
+            >BOOK A DEMO</button>
           </v-col>
         </v-row>
         <v-row
@@ -219,7 +217,7 @@
           and Terms Of Service.
         </v-row>
         <v-row class="mobile-rows-margin">
-          <v-col>
+          <v-col cols="5">
             <img
               style="margin-left: 30px; padding-left: 10px ;"
               src="~/assets/images/G2.png"
@@ -227,7 +225,7 @@
               width="120"
             />
           </v-col>
-          <v-col>
+          <v-col cols="3">
             <img
               style="padding-right: 8px"
               src="~/assets/images/Gartner.png"
@@ -428,7 +426,23 @@ export default defineComponent({
 
 .custom-btn:hover {
   background-color: #047d80;
+  border: solid white;
+  border-radius: 18px;
+ 
 
+  margin-top: 10px;
+
+}
+
+.input-custom-btn {
+  background-color: #ff4261;
+  min-height: 30px;
+  min-width: 150px;
+  font-size: large;
+  border: none;
+  font-family: Poppins;
+  color: white;
+  border-radius: 25px;
 }
 
 .title-style {
