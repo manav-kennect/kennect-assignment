@@ -1,0 +1,9 @@
+.v-btn__overlay {
+    background-color: red !important;
+    color: white;
+    /* opacity: none !important; */
+}
+
+.v-btn__content {
+    color: aliceblue;
+}

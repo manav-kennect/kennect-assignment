@@ -27,12 +27,10 @@
           transparency and achieve operation efficiency.</v-row
         >
         <v-row class="title-style"
-          ><v-btn
-            disable-hover
-            :ripple="false"
+          ><button
             class="custom-btn"
-            text="Let's Kennect"
-          ></v-btn
+            
+          >Let's Kennect</button
         ></v-row>
         <v-row
           class="title-style"
@@ -417,16 +415,21 @@ export default defineComponent({
 .custom-btn {
   background-color: #ff4261;
   border-radius: 18px;
+  font-size: large;
+  min-width: 180px;
+  font-family: Poppins;
+  border: none;
+  border-color: none;
   color: white;
-  margin-top: 15px;
-  padding: 10px;
+  margin-top: 10px;
+  padding: 5px;
   border-style: outset;
 }
 
-/* .custom-btn:hover {
-  background-color: aliceblue;
-  text-decoration-color: black;
-} */
+.custom-btn:hover {
+  background-color: #047d80;
+
+}
 
 .title-style {
   margin: 50px;

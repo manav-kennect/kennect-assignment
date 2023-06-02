@@ -11,18 +11,18 @@
       </v-col>
 
       <v-col cols="5">
-        <v-btn
+        <button
           variant="text"
           class="top-bar-btns"
           v-for="(btn, index) in buttons"
-          >{{ btn }}</v-btn
+          >{{ btn }}</button
         >
       </v-col>
       <v-col class="meet-col">
-        <v-btn class="meet-btn">BOOK A MEETING</v-btn>
+        <button class="meet-btn">BOOK A MEETING</button>
       </v-col>
       <v-col cols="1">
-        <v-btn variant="outlined" class="login-btn">LOGIN</v-btn>
+        <button variant="outlined" class="login-btn">LOGIN</button>
       </v-col>
     </v-row>
   </v-container>
@@ -85,7 +85,7 @@ export default defineComponent({
     if(process.client) {
     window.addEventListener("resize", handleResize);
     }
-    
+
     onMounted(() => {
       if (process.client) {
         checkScreenSize();
@@ -114,23 +114,33 @@ export default defineComponent({
   color: #047d80;
   padding: 0px 5px;
   font-family: Poppins;
+  font-size: large;
+  border: none;
+  background-color: white;
+  min-width: 60px;
+  min-height: 40px;
 }
 
 .login-btn {
   color: black;
   border-color: #047d80;
-  border-radius: 18px;
+  border-radius: 15px;
   border-width: 3px;
   margin-top: 15px;
+  min-height: 35px;
+  min-width: 70px;
+  background-color: white;
 }
 
 .meet-btn {
   background-color: #ff4261;
   border-radius: 18px;
+  border: none;
   color: white;
   margin-top: 15px;
   margin-left: 18px;
   padding: 0px 18px 0px 18px;
+  min-height: 35px;
 }
 
 @media (max-width: 600px) {
