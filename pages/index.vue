@@ -253,12 +253,12 @@
       </v-row>
     </v-row>
     <v-row no-gutters class="mobile-rows-margin"  style="align-content: center;;">
-          <div style="display: flex; flex-direction: column; color: #047d80; width: 100vh; height: 7vh; padding:10px 0px 0px 0px; margin: 0px; font-size: xx-large; background-color: white; align-items: center;">
+          <div style="display: flex; flex-direction: column; color: #047d80; width: 100vh; height: 7vh; padding:20px 0px 0px 0px; margin: 0px; font-size: xx-large; background-color: white; align-items: center;">
             <span>Trusted By</span>
           <span style="max-width: 30px; min-width: 25px; max-height: 5px; min-height: 3px; background-color: pink;" ></span>
           </div>
         </v-row>
-    <v-row no-gutters style="background-color: black; padding-top: 45px;">
+    <v-row no-gutters style="background-color: white; padding-top: 35px;">
       <v-carousel
         cycle
         height="100"
@@ -268,38 +268,38 @@
         :show-arrows="false"
         style="margin-left: 20px"
       >
-        <v-carousel-item v-for="(image, i) in images" :key="i">
+        <v-carousel-item v-for="(image, i) in images_mobile" :key="i">
           <img
-            :src="images[i]"
+            :src="images_mobile[i]"
             style="margin-left: 0px"
-            width="90"
-            height="40"
+            width="100"
+            height="60"
           />
           <img
-            v-if="images[i + 1]"
-            :src="images[i + 1]"
-            style="margin-left: 20px"
-            width="90"
-            height="40"
-          />
-          <img
-            v-else
-            :src="images[i - 2]"
-            style="margin-left: 20px"
-            width="9 0"
-            height="40"
-          />
-          <img
-            v-if="images[i + 2]"
-            :src="images[i + 2]"
-            style="margin-left: 20px"
+            v-if="images_mobile[i + 1]"
+            :src="images_mobile[i + 1]"
+            style="margin-left: 10px"
             width="100"
             height="40"
           />
           <img
             v-else
-            :src="images[i - 3]"
-            style="margin-left: 20px"
+            :src="images_mobile[i - 2]"
+            style="margin-left: 10px"
+            width="100"
+            height="40"
+          />
+          <img
+            v-if="images_mobile[i + 2]"
+            :src="images_mobile[i + 2]"
+            style="margin-left: 10px"
+            width="100"
+            height="40"
+          />
+          <img
+            v-else
+            :src="images_mobile[i - 3]"
+            style="margin-left: 10px"
             width="100"
             height="40"
           />
@@ -320,6 +320,22 @@ import Lupin from "~/assets/images/Lupin.png";
 import sanofi from "~/assets/images/sanofi.png";
 import Swigg from "~/assets/images/Swigg.png";
 import Zydus from "~/assets/images/Zydus.png";
+import AjantaMobile from "~/assets/images/Ajanta-mobile.png"
+import AstraMobile from "~/assets/images/astrazeneca-logo-mobile.png"
+import ZydusMoble from "~/assets/images/Zydus-logo-mobile.png"
+import SwiggyMobile from "~/assets/images/swiggy-mobile.png"
+import LupinMobile from "~/assets/images/lupin-mobile.png"
+import LoozaMobile from "~/assets/images/Looza-mobile.png"
+import SanofiMobile from "~/assets/images/logo-sanofi-mobile.png"
+import IndocoMobile from "~/assets/images/logo-indoco-mobile.png"
+import IncyteMobile from "~/assets/images/Incyte_logo.svg-mobile.png"
+import BoerighnerMobile from "~/assets/images/Homelogo1-mobile.png"
+
+
+
+
+
+
 
 export default defineComponent({
   name: "KennectHomePage",
@@ -336,6 +352,19 @@ export default defineComponent({
       boehringer,
       Incyte,
     ]);
+
+    const images_mobile = ref([
+      AjantaMobile,
+      AstraMobile,
+      ZydusMoble,
+      SanofiMobile,
+      SwiggyMobile,
+      IncyteMobile,
+      IndocoMobile,
+      BoerighnerMobile,
+      LoozaMobile,
+      LupinMobile
+    ])
     function checkScreenSize() {
       isMobile.value = window.screen.width <= 600;
       console.log(isMobile.value);
@@ -368,6 +397,7 @@ export default defineComponent({
       images,
       hover,
       isMobile,
+      images_mobile
     };
   },
 });
